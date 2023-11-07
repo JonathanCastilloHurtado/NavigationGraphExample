@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <!--Every fragment mus be here to handler the navigation-->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.navigationexample.HomeFragment"
+        android:label="HomeFragment">
+        <!--action are the destination where fragment could nav-->
+        <action
+            android:id="@+id/action_go_to_formFragment"
+            app:destination="@id/fragmentFrom" />
+        <action
+            android:id="@+id/action_go_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentFrom"
+        android:name="com.example.navigationexample.FormularioFragment"
+        android:label="FragmentFrom" >
+        <action
+            android:id="@+id/action_fragmentFrom_to_loginFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/go_to_lastFragment"
+            app:destination="@id/fragmentLast" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentLast"
+        android:name="com.example.navigationexample.LastFragment"
+        android:label="FragmentLast" >
+        <action
+            android:id="@+id/action_go_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
