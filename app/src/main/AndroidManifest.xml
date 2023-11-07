@@ -15,6 +15,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <!--Component that allows launch app from web´s url-->
+            <nav-graph android:value="@navigation/nav_graph" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

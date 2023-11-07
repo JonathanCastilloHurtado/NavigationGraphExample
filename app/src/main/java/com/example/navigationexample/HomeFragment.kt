@@ -22,7 +22,7 @@ class HomeFragment : Fragment() {
             //Pass param to next form
             val bundle = Bundle()
             bundle.putString("amount", "PARAM FROM HOME")
-            //Start nav to next fagment 
+            //Start nav to next fagment
             findNavController().navigate(R.id.action_go_to_formFragment,bundle)
         }
     }

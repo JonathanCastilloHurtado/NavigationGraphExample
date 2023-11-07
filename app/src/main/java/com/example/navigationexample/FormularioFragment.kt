@@ -22,7 +22,7 @@ class FormularioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //Recover the para from the previous fragment
-        view.findViewById<TextView>(R.id.titulo)?.setText(getArguments()?.getString("amount"))
+        view.findViewById<TextView>(R.id.titulo)?.setText(getArguments()?.getString("myarg"))
         view.findViewById<Button>(R.id.navigate_button)?.setOnClickListener {
             findNavController().navigate(R.id.go_to_lastFragment)
         }
